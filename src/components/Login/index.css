@@ -1,0 +1,185 @@
+.login-page-container {
+  display: flex;
+  height: 1024px;
+  width: 1440px;
+  left: -11402px;
+  top: 10569px;
+  border-radius: 0px;
+}
+
+@media screen and (max-width: 768px) {
+  .login-page-container {
+    display: none;
+  }
+}
+
+.login-container {
+  background-color: #e5e5e5;
+  padding-top: 250px;
+  padding-left: 165px;
+  width: 735px;
+}
+
+.login-form {
+  height: 523px;
+  width: 456px;
+  border-radius: 8px;
+  background: #fefeff;
+  box-shadow: 0px 8px 40px 0px #07070714;
+}
+
+.website-logo {
+  height: 43px;
+  width: 53px;
+  margin-left: 201px;
+  margin-right: 202px;
+  margin-top: 48px;
+}
+
+.logo-heading {
+  height: 32px;
+  width: 172px;
+  margin-left: 142px;
+  margin-right: 142px;
+  font-family: DM Sans;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 32px;
+  color: #f7931e;
+  margin-top: 0px;
+}
+
+.login-heading {
+  font-family: DM Sans;
+  font-size: 32px;
+  font-weight: 500;
+  height: 40px;
+  margin-left: 188px;
+  margin-right: 188px;
+  margin-bottom: 32px;
+  margin-top: 32px;
+  color: #0f172a;
+}
+
+@media screen and (max-width: 768px) {
+  .login-heading {
+    height: 32px;
+    margin-left: 24px;
+    margin-top: -40px;
+    margin-bottom: 48px;
+    top: 296px;
+    font-weight: 500;
+    font-size: 24px;
+  }
+}
+
+.label {
+  height: 16px;
+  font-family: DM Sans;
+  font-size: 12px;
+  font-weight: 700;
+  margin-left: 48px;
+  color: #475569;
+}
+
+@media screen and (max-width: 768px) {
+  .label {
+    height: 16px;
+    margin-left: 24px;
+    font-size: 14px;
+    color: #64748b;
+  }
+}
+
+.user-input {
+  height: 40px;
+  width: 360px;
+  margin: 8px 48px 8px 48px;
+  padding: 8px;
+  border-radius: 2px;
+  font-size: 14px;
+  background: #e2e8f0;
+  outline: none;
+  border: none;
+}
+
+@media screen and (max-width: 768px) {
+  .user-input {
+    margin: 8px 24px 16px 24px;
+    width: 312px;
+  }
+}
+
+.error-msg {
+  height: 18px;
+  margin-left: 48px;
+  margin-bottom: 32px;
+  margin-top: 0px;
+  font-family: DM Sans;
+  font-size: 14px;
+  font-weight: 400;
+  color: #ef4444;
+}
+
+@media screen and (max-width: 768px) {
+  .error-msg {
+    margin-left: 24px;
+    height: 16px;
+    font-size: 12px;
+    margin-top: 0px;
+  }
+}
+
+.login-button {
+  height: 40px;
+  width: 360px;
+  margin: 0px 48px 48px 48px;
+  border-radius: 8px;
+  background: #f7931e;
+  font-family: DM Sans;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+}
+
+@media screen and (max-width: 768px) {
+  .login-button {
+    width: 312px;
+    margin: 0px 24px 48px 24px;
+  }
+}
+
+.banner-container {
+  height: 100vh;
+}
+
+.banner {
+  background: #c4c4c4;
+  height: 1024px;
+  width: 705px;
+  left: 735px;
+  top: 0px;
+}
+
+.mobile-login-page {
+  width: 360px;
+  height: 640px;
+  background: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-login-page {
+    display: none;
+  }
+}
+
+.mobile-login-image {
+  border-radius: 25px;
+  margin-left: 56px;
+  margin-top: -38px;
+}

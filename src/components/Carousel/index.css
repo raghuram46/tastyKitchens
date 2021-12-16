@@ -1,0 +1,27 @@
+.offers-container {
+  list-style-type: none;
+  height: 432px;
+  padding: 48px 165px 48px 165px;
+}
+
+@media screen and (max-width: 768px) {
+  .offers-container {
+    height: 188px;
+    padding: 0px;
+    margin: 0px;
+  }
+}
+
+.offer-image {
+  height: 320px;
+  width: 1110px;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .offer-image {
+    height: 188px;
+    width: 414px;
+    margin: 0px;
+  }
+}

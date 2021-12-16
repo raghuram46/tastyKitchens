@@ -1,0 +1,36 @@
+.quantity-controller {
+  display: flex;
+  align-items: center;
+  margin-top: 13px;
+}
+
+@media screen and (max-width: 768px) {
+  .quantity-controller {
+    margin-top: 4px;
+  }
+}
+
+.control-button {
+  height: 18px;
+  width: 18px;
+  border-radius: 2.25px;
+  padding: 4.5px;
+  border: 0.75px solid #475569;
+  color: #475569;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+}
+
+.count {
+  margin-right: 12px;
+  margin-left: 12px;
+  font-family: DM Sans;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #475569;
+}

@@ -1,0 +1,144 @@
+.restaurants-container {
+  height: auto;
+  padding: 0px 165px 24px 165px;
+}
+
+@media screen and (max-width: 768px) {
+  .restaurants-container {
+    padding: 24px 24px 24px 24px;
+  }
+}
+
+.heading {
+  font-family: DM Sans;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 48px;
+  color: #183b56;
+  margin-bottom: 0px;
+}
+
+@media screen and (max-width: 768px) {
+  .heading {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.text-filter {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0px;
+}
+
+@media screen and (max-width: 768px) {
+  .text-filter {
+    flex-direction: column;
+  }
+}
+
+.text {
+  color: #64748b;
+  font-family: DM Sans;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .text {
+    font-size: 12px;
+  }
+}
+
+.filter-container {
+  display: flex;
+  align-items: center;
+  margin-left: 0px;
+}
+
+.sort-icon {
+  color: #475569;
+  height: 24px;
+  width: 24px;
+  margin-right: 12px;
+  margin-left: 0px;
+}
+
+.sort-heading {
+  color: #475569;
+  font-family: DM Sans;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.select-filter {
+  outline: none;
+  border: none;
+  color: #475569;
+  font-family: DM Sans;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.sort-option {
+  background: #f1f5f9;
+  color: #475569;
+  border-radius: 8px;
+  font-family: DM Sans;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  height: 112.00299835205078px;
+  width: 161px;
+  border-radius: 12px;
+  padding: 8px;
+}
+
+.line {
+  margin: 8px 0px 48px 0px;
+  border: 1px dashed #cbd2d9;
+}
+
+@media screen and (max-width: 768px) {
+  .line {
+    display: none;
+  }
+}
+
+.restaurants-list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination-button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+.pagination-icon {
+  height: 32px;
+  width: 32px;
+  color: #334155;
+}
+
+.page-number {
+  height: 27px;
+  width: 57px;
+  color: #334155;
+  font-family: Bree Serif;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+}

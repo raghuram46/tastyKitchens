@@ -1,0 +1,156 @@
+.header {
+  height: 96px;
+  background: #f8fafc;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    height: 64px;
+  }
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 167px;
+  margin-right: 165px;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-content {
+    margin-left: 24px;
+    margin-right: 26px;
+  }
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.header-logo {
+  height: 39px;
+  width: 49px;
+  margin: 28px 18px 29px 0px;
+}
+
+@media screen and (max-width: 768px) {
+  .header-logo {
+    height: 39px;
+    width: 32px;
+    margin: 16px 8px 16px 0px;
+  }
+}
+
+.tasty-kitchens {
+  color: #f7931e;
+  font-family: DM Sans;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .tasty-kitchens {
+    font-size: 16px;
+  }
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-list {
+    display: none;
+  }
+}
+
+.active-nav-item {
+  color: #f7931e;
+  font-family: DM Sans;
+  font-size: 16px;
+  font-weight: 700;
+  margin-right: 32px;
+  text-decoration: none;
+}
+
+.nav-item {
+  font-family: DM Sans;
+  font-size: 16px;
+  font-weight: 700;
+  margin-right: 32px;
+  text-decoration: none;
+}
+
+.logout-button {
+  background: #f7931e;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 16px;
+  height: 32px;
+  width: 73px;
+  outline: none;
+  border: none;
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .logout-button {
+    margin-right: auto;
+  }
+}
+
+.menu {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    background: transparent;
+    border: none;
+    outline: none;
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.hamburger {
+  height: 18px;
+  width: 12px;
+  color: #183b56;
+}
+
+.menu-list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  background: #f8fafc;
+  margin-top: 0px;
+  padding-left: 32px;
+  height: 96px;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-list {
+    display: none;
+  }
+}
+
+.close-icon {
+  height: 20px;
+  width: 20px;
+  margin-right: 26px;
+  color: #334155;
+}
