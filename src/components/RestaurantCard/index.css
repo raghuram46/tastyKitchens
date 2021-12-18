@@ -43,6 +43,7 @@
   font-size: 18px;
   color: #334155;
   margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 @media screen and (max-width: 768px) {
@@ -56,7 +57,7 @@
   font-size: 14px;
   color: #64748b;
   margin-bottom: 0px;
-  margin-top: 0px;
+  margin-top: 6px;
 }
 
 @media screen and (max-width: 768px) {
@@ -68,23 +69,25 @@
 .rating-container {
   display: flex;
   align-items: center;
-  margin-top: -10px;
 }
 
-.star-icon {
+.restaurant-star-icon {
   color: #ffcc00;
   height: 12px;
   width: 12px;
   margin-right: 4px;
+  margin-top: 0px;
+  margin-bottom: 12px;
 }
 
-.rating {
+.restaurant-card-rating {
   font-family: DM Sans;
   font-weight: bold;
   font-size: 14px;
   line-height: 18px;
   color: #1e293b;
   margin-right: 4px;
+  margin-top: 0px;
 }
 
 .reviews {
@@ -92,4 +95,5 @@
   font-size: 12px;
   line-height: 16px;
   color: #64748b;
+  margin-top: 0px;
 }

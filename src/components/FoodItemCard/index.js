@@ -52,7 +52,6 @@ class FoodItemCard extends Component {
 
   onClickAddButton = () => {
     const {activeCount, cartList} = this.state
-    console.log(cartList)
     const {foodItemData} = this.props
     const cartItemDetails = {
       cost: foodItemData.cost,

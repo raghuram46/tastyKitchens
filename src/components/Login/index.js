@@ -63,7 +63,7 @@ class Login extends Component {
           <div className="login-container">
             <form className="login-form" onSubmit={this.onClickLogin}>
               <img src={logo} alt="website logo" className="website-logo" />
-              <p className="logo-heading">Tasty Kitchens</p>
+              <h1 className="logo-heading">Tasty Kitchens</h1>
               <h1 className="login-heading">Login</h1>
               <label htmlFor="username" className="label">
                 USERNAME

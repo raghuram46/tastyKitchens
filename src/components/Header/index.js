@@ -19,14 +19,16 @@ class Header extends Component {
 
   renderMenuItems = () => {
     const {match} = this.props
-    const {path, url} = match
-    const activeClassName = path === url ? 'active-nav-item' : 'nav-item'
+    const {path} = match
+    const activeHomeClassName = path === '/' ? 'active-nav-item' : 'nav-item'
+    const activeCartClassName =
+      path === '/cart' ? 'active-nav-item' : 'nav-item'
     return (
       <ul className="menu-list">
-        <Link to="/" className={activeClassName}>
+        <Link to="/" className={activeHomeClassName}>
           <li>Home</li>
         </Link>
-        <Link to="/cart" className="nav-item">
+        <Link to="/cart" className={activeCartClassName}>
           <li>Cart</li>
         </Link>
         <button
@@ -50,9 +52,11 @@ class Header extends Component {
   render() {
     const {showMenu} = this.state
     const {match} = this.props
-    const {path, url} = match
+    const {path} = match
 
-    const activeClassName = path === url ? 'active-nav-item' : 'nav-item'
+    const activeHomeClassName = path === '/' ? 'active-nav-item' : 'nav-item'
+    const activeCartClassName =
+      path === '/cart' ? 'active-nav-item' : 'nav-item'
 
     return (
       <>
@@ -63,10 +67,10 @@ class Header extends Component {
               <p className="tasty-kitchens">Tasty Kitchens</p>
             </Link>
             <ul className="nav-list">
-              <Link to="/" className={activeClassName}>
+              <Link to="/" className={activeHomeClassName}>
                 <li>Home</li>
               </Link>
-              <Link to="/cart" className="nav-item">
+              <Link to="/cart" className={activeCartClassName}>
                 <li>Cart</li>
               </Link>
               <button

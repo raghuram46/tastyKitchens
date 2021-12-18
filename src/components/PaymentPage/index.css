@@ -1,0 +1,50 @@
+.payment-status {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.payment-success-icon {
+  height: 80px;
+  width: 80px;
+}
+@media screen and (max-width: 768px) {
+  .payment-success-icon {
+    height: 48px;
+    width: 48px;
+  }
+}
+
+.payment-heading {
+  font-family: DM Sans;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  color: #1e293b;
+}
+
+@media screen and (max-width: 768px) {
+  .payment-heading {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 0px;
+  }
+}
+
+.payment-text {
+  font-family: DM Sans;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #64748b;
+}
+
+@media screen and (max-width: 768px) {
+  .payment-text {
+    font-size: 14px;
+    margin-top: 16px;
+    margin-bottom: 32px;
+  }
+}

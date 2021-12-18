@@ -52,6 +52,7 @@
   font-family: DM Sans;
   font-size: 24px;
   line-height: 32px;
+  width: 479px;
   color: #ffffff;
   text-align: center;
 }
@@ -60,6 +61,7 @@
   .footer-text {
     font-size: 14px;
     line-height: 24px;
+    width: 280px;
   }
 }
 

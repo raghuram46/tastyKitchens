@@ -2,6 +2,8 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
+import CarouselItem from '../CarouselItem'
+
 import './index.css'
 
 const Carousel = props => {
@@ -19,9 +21,7 @@ const Carousel = props => {
     <ul className="offers-container">
       <Slider {...settings}>
         {offersList.map(eachOffer => (
-          <li>
-            <img src={eachOffer.imageUrl} alt="offer" className="offer-image" />
-          </li>
+          <CarouselItem key={eachOffer.id} itemData={eachOffer} />
         ))}
       </Slider>
     </ul>

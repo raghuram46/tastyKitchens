@@ -24,8 +24,8 @@ const RestaurantCard = props => {
           <h1 className="name">{restaurantData.name}</h1>
           <p className="cuisine">{restaurantData.cuisine}</p>
           <div className="rating-container">
-            <AiFillStar className="star-icon" />
-            <p className="rating">{updatedUserRating.rating}</p>
+            <AiFillStar className="restaurant-star-icon" />
+            <p className="restaurant-card-rating">{updatedUserRating.rating}</p>
             <p className="reviews">({updatedUserRating.totalReviews})</p>
           </div>
         </div>

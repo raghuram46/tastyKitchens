@@ -15,7 +15,7 @@ const sortByOptions = [
     value: 'Highest',
   },
   {
-    id: 2,
+    id: 1,
     displayText: 'Lowest',
     value: 'Lowest',
   },
@@ -32,7 +32,7 @@ const limit = 9
 class AllRestaurants extends Component {
   state = {
     restaurantsList: [],
-    activeSortOption: sortByOptions[0].value,
+    activeSortOption: sortByOptions[1].value,
     apiStatus: apiStatusConstants.initial,
     activePageNumber: 1,
   }
@@ -71,7 +71,7 @@ class AllRestaurants extends Component {
     const jwtToken = Cookies.get('jwt_token')
     const {activeSortOption, activePageNumber} = this.state
     const offset = (activePageNumber - 1) * limit
-    const apiUrl = `https://apis.ccbp.in/restaurants-list?offset=${offset}&limit=${limit}&sort_by_rating=${activeSortOption}`
+    const apiUrl = `https://apis.ccbp.in/restaurants-list?search=&offset=${offset}&limit=${limit}&sort_by_rating=${activeSortOption}`
     const options = {
       method: 'GET',
       headers: {
@@ -152,7 +152,7 @@ class AllRestaurants extends Component {
           </p>
           <div className="filter-container">
             <BsFilterLeft className="sort-icon" />
-            <h1 className="sort-heading">Sort by</h1>
+            <p className="sort-heading">Sort by</p>
             <select
               value={activeSortOption}
               onChange={this.onChangeOption}
