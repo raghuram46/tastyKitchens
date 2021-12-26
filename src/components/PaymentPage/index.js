@@ -16,13 +16,11 @@ const PaymentPage = () => (
       />
       <h1 className="payment-heading">Payment Successful</h1>
       <p className="payment-text">
-        Thank you for ordering
-        <br />
-        Your payment is successfully completed.
+        Thank you for ordering Your payment is successfully completed.
       </p>
       <Link to="/">
         <button type="button" className="home-page-button">
-          Home Page
+          Go To Home
         </button>
       </Link>
     </div>

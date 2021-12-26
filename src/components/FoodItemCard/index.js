@@ -1,137 +1,84 @@
-import {Component} from 'react'
-
 import {AiFillStar} from 'react-icons/ai'
 import {BiRupee} from 'react-icons/bi'
 import Counter from '../Counter'
+import CartContext from '../../context/CartContext'
 
 import './index.css'
 
-class FoodItemCard extends Component {
-  state = {showAddButton: true, activeCount: 1, cartList: []}
-
-  decreaseQuantity = () => {
-    const {activeCount} = this.state
-    const {foodItemData} = this.props
-
-    if (activeCount === 1) {
-      this.setState(
-        prevState => ({
-          cartList: prevState.cartList.filter(
-            eachItem => eachItem.id !== foodItemData.id,
-          ),
-          showAddButton: true,
-        }),
-        this.setCartData,
-      )
-    } else {
-      this.setState(
-        prevState => ({activeCount: prevState.activeCount - 1}),
-        this.onClickAddButton,
-      )
-    }
+const FoodItemCard = props => {
+  const {foodItemData} = props
+  const updatedData = {
+    name: foodItemData.name,
+    cost: foodItemData.cost,
+    foodType: foodItemData.food_type,
+    imageUrl: foodItemData.image_url,
+    id: foodItemData.id,
+    rating: foodItemData.rating,
+  }
+  const cartItemData = {
+    name: foodItemData.name,
+    cost: foodItemData.cost,
+    imageUrl: foodItemData.image_url,
+    id: foodItemData.id,
   }
 
-  increaseQuantity = () => {
-    this.setState(
-      prevState => ({activeCount: prevState.activeCount + 1}),
-      this.onClickAddButton,
-    )
-  }
+  return (
+    <CartContext.Consumer>
+      {value => {
+        const {
+          cartList,
+          addCartItem,
+          incrementCartItemQuantity,
+          decrementCartItemQuantity,
+        } = value
 
-  setCartData = () => {
-    const {cartList} = this.state
-    localStorage.setItem('cartData', JSON.stringify(cartList))
+        const currentFoodItem = cartList.filter(
+          eachItem => eachItem.id === updatedData.id,
+        )
 
-    this.getCartData()
-  }
+        const activeCount =
+          currentFoodItem.length > 0 ? currentFoodItem[0].quantity : 1
 
-  getCartData = () => {
-    const data = localStorage.getItem('cartData')
-    console.log(data)
-  }
+        const onClickAddButton = () => {
+          addCartItem({...cartItemData, quantity: activeCount})
+        }
 
-  onClickAddButton = () => {
-    const {activeCount, cartList} = this.state
-    const {foodItemData} = this.props
-    const cartItemDetails = {
-      cost: foodItemData.cost,
-      quantity: activeCount,
-      id: foodItemData.id,
-      imageUrl: foodItemData.image_url,
-      name: foodItemData.name,
-    }
-    const isItemAvailable = cartList.some(each => each.id === foodItemData.id)
+        const increaseQuantity = () => {
+          incrementCartItemQuantity(cartItemData.id)
+        }
 
-    if (isItemAvailable) {
-      this.setState(
-        prevState => ({
-          cartList: prevState.cartList.map(eachItem => {
-            if (eachItem.id === foodItemData.id) {
-              return {...eachItem, quantity: activeCount}
-            }
-            return eachItem
-          }),
-        }),
-        this.setCartData,
-      )
-    } else {
-      this.setState(
-        prevState => ({
-          cartList: [...prevState.cartList, cartItemDetails],
-          showAddButton: false,
-        }),
-        this.setCartData,
-      )
-    }
-  }
+        const decreaseQuantity = () => {
+          decrementCartItemQuantity(cartItemData.id)
+        }
 
-  render() {
-    const {showAddButton, activeCount} = this.state
-    const {foodItemData} = this.props
-    const updatedData = {
-      name: foodItemData.name,
-      cost: foodItemData.cost,
-      foodType: foodItemData.food_type,
-      imageUrl: foodItemData.image_url,
-      id: foodItemData.id,
-      rating: foodItemData.rating,
-    }
-
-    return (
-      <li testid="foodItem" className="food-item">
-        <img
-          src={updatedData.imageUrl}
-          alt="food-item"
-          className="food-image"
-        />
-        <div className="food-item-details">
-          <h1 className="item-name">{updatedData.name}</h1>
-          <p className="price">
-            <BiRupee /> {updatedData.cost}.00
-          </p>
-          <div className="rating-container">
-            <AiFillStar className="star-icon-food" />
-            <p className="item-rating">{updatedData.rating}</p>
-          </div>
-          {showAddButton ? (
-            <button
-              type="button"
-              className="add-button"
-              onClick={this.onClickAddButton}
-            >
-              ADD
-            </button>
-          ) : (
-            <Counter
-              decreaseQuantity={this.decreaseQuantity}
-              increaseQuantity={this.increaseQuantity}
-              activeCount={activeCount}
+        return (
+          <li testid="foodItem" className="food-item">
+            <img
+              src={updatedData.imageUrl}
+              alt="food-item"
+              className="food-image"
             />
-          )}
-        </div>
-      </li>
-    )
-  }
+            <div className="food-item-details">
+              <h1 className="item-name">{updatedData.name}</h1>
+              <p className="price">
+                <BiRupee /> {updatedData.cost}.00
+              </p>
+              <div className="rating-container">
+                <AiFillStar className="star-icon-food" />
+                <p className="item-rating">{updatedData.rating}</p>
+              </div>
+              <Counter
+                decreaseQuantity={decreaseQuantity}
+                increaseQuantity={increaseQuantity}
+                addItemToCart={onClickAddButton}
+                activeCount={activeCount}
+              />
+            </div>
+          </li>
+        )
+      }}
+    </CartContext.Consumer>
+  )
 }
 
 export default FoodItemCard
